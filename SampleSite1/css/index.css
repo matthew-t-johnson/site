@@ -1,0 +1,102 @@
+﻿html {
+  background: linear-gradient(to bottom right, #add8e6, #99d599);
+  background: linear-gradient(to bottom right, #ffffff, #c7c7c7);
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+body {
+  background-color: unset;
+}
+h1 {
+  font-family: "Segoe UI", sans-serif;
+}
+.template {
+  display: none;
+}
+section {
+  margin-left: auto;
+  margin-right: auto;
+}
+#navbar {
+  box-shadow: 0px 1px 10px #000000ba;
+  border-bottom: none;
+  background-color: #fcfcfceb;
+  background-color: #333333fc;
+  margin-bottom: 0;
+}
+#navbar #navbar-logo {
+  background-image: url('../images/logoRedesign_April_2017.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50px;
+}
+#navbar .navbar-list-item.active {
+  color: #444;
+  background-color: unset;
+}
+#navbar .navbar-list-item.active a {
+  background-color: unset;
+  background: linear-gradient(330deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
+  background: linear-gradient(to bottom right, #add8e6, #99d599);
+  background: linear-gradient(to bottom right, lightblue, lightgreen);
+  background: linear-gradient(to bottom right, #0592c0, #d96b6b);
+  background: linear-gradient(to bottom right, #3fd2a9, #155597);
+  background: linear-gradient(to top right, #155597, #3fd2a9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#navbar a {
+  font-size: 28px;
+  color: #999;
+}
+#navbar a:hover {
+  color: #ddd;
+}
+#content-sections {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px 5% 0;
+  width: 100%;
+  max-width: 2000px;
+}
+#content-sections #blogIndex h1 {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-left: 13px;
+}
+#content-sections #blogIndex #index-container.row {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.5%;
+  margin-bottom: 1.5%;
+}
+#content-sections #blogIndex #index-container.row .blog-item-container .blog-item {
+  border: 1px solid black;
+  border-radius: 5px;
+  /*margin-right: 10px;*/
+  margin-bottom: 10px;
+  padding: 10px;
+}
+#content-sections #blogIndex #index-container.row .blog-item-container .blog-item .title {
+  margin-top: 30%;
+}
+#content-sections #blogIndex #index-container.row .blog-item-container .blog-item .date {
+  margin-bottom: 0;
+}
+#content-sections #blogIndex #index-container.row .blog-item-container .blog-item.template {
+  display: none;
+}
+footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #333333fc;
+  color: #eee;
+}
+footer p {
+  margin: 3px 0 3px 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
