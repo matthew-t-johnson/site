@@ -115,6 +115,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="images\logoRedesign_April_2017.svg" />
+    <Content Include="images\sample.png" />
+    <Content Include="images\sample.svg" />
     <Content Include="sections\apollo.html" />
     <Content Include="content\bootstrap-theme.css" />
     <Content Include="content\bootstrap-theme.min.css" />
