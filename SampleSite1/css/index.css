@@ -30,6 +30,7 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
   width: 50px;
+  margin-left: 10px;
 }
 #navbar .navbar-list-item.active {
   color: #444;
