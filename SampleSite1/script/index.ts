@@ -81,15 +81,16 @@ function LoadIndex(container: HTMLElement): void {
 
     for (var i = 0; i < items.length; i++) {
         var clone = template.cloneNode(true) as HTMLElement;
-        clone.setAttribute("data-blog-id", items[i].id);
-        clone.querySelector(".title").textContent = items[i].title;
-        clone.querySelector(".description").textContent = items[i].description;
-        clone.querySelector(".date").textContent = new Date(items[i].date).toLocaleString();
+        var blogStruct = clone.querySelector(".blog-item") as HTMLElement;
+        blogStruct.setAttribute("data-blog-id", items[i].id);
+        blogStruct.querySelector(".title").textContent = items[i].title;
+        blogStruct.querySelector(".description").textContent = items[i].description;
+        blogStruct.querySelector(".date").textContent = new Date(items[i].date).toLocaleString();
         if (items[i].headlinePhotoURL) {
-            clone.style.backgroundImage = `url('${items[i].headlinePhotoURL}')`;
+            blogStruct.style.backgroundImage = `url('${items[i].headlinePhotoURL}')`;
         }
         clone.classList.remove("template");
-        clone.addEventListener("click", e => {
+        blogStruct.addEventListener("click", e => {
             location.hash = `#blog-${(e.currentTarget as HTMLElement).getAttribute("data-blog-id")}`;
         });
         index.appendChild(clone);
