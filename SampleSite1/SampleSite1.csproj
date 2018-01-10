@@ -114,6 +114,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\logo2_v2.svg" />
     <Content Include="images\logoRedesign_April_2017.svg" />
     <Content Include="images\sample.png" />
     <Content Include="images\sample.svg" />

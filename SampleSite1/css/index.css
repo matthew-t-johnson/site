@@ -26,6 +26,7 @@ section {
 }
 #navbar #navbar-logo {
   background-image: url('../images/sample.svg');
+  background-image: url('../images/logo2_v2.svg');
   background-repeat: no-repeat;
   background-size: cover;
   width: 50px;
