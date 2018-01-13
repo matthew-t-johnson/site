@@ -1,12 +1,8 @@
-﻿html {
-  background: linear-gradient(to bottom right, #add8e6, #99d599);
+﻿body {
   background: linear-gradient(to bottom right, #ffffff, #c7c7c7);
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
-}
-body {
-  background-color: unset;
 }
 h1 {
   font-family: "Segoe UI", sans-serif;
@@ -150,7 +146,7 @@ section {
   display: none;
 }
 footer {
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
