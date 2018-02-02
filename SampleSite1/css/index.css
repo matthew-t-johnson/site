@@ -14,40 +14,45 @@ section {
   margin-left: auto;
   margin-right: auto;
 }
-#navbar {
+.navbar {
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.72941176);
   border-bottom: none;
   background-color: rgba(51, 51, 51, 0.98823529);
   margin-bottom: 0;
+  padding: 0;
+  height: 50px;
 }
-#navbar #navbar-logo {
+.navbar #navbar-logo {
   background-image: url('../images/sample.svg');
   background-image: url('../images/logo2_v2.svg');
   background-repeat: no-repeat;
   background-size: cover;
-  width: 50px;
+  width: 40px;
+  height: 40px;
   margin-left: 10px;
 }
-#navbar .navbar-list-item.active {
+.navbar .navbar-list-item.active {
   color: #444;
   background-color: unset;
 }
-#navbar .navbar-list-item.active a {
-  background-color: unset;
-  background: linear-gradient(330deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
-  background: linear-gradient(to bottom right, #add8e6, #99d599);
-  background: linear-gradient(to bottom right, lightblue, lightgreen);
-  background: linear-gradient(to bottom right, #0592c0, #d96b6b);
-  background: linear-gradient(to bottom right, #3fd2a9, #155597);
-  background: linear-gradient(to top right, #155597, #3fd2a9);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.navbar .navbar-list-item.active .nav-link {
+  /*background-color: unset;
+            background: linear-gradient(330deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
+            background: linear-gradient(to bottom right, #add8e6, #99d599);
+            background: linear-gradient(to bottom right, lightblue, lightgreen);
+            background: linear-gradient(to bottom right, #0592c0, #d96b6b);
+            background: linear-gradient(to bottom right, #3fd2a9, #155597);
+            background: linear-gradient(to top right, #155597, #3fd2a9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;*/
+  color: #2192ff;
+  color: #2aa5ff;
 }
-#navbar a {
+.navbar a {
   font-size: 28px;
   color: #999;
 }
-#navbar a:hover {
+.navbar a:hover {
   color: #ddd;
 }
 @keyframes shadowHover {
