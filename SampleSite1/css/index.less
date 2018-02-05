@@ -1,8 +1,15 @@
-﻿body {
+﻿@import url("https://use.typekit.net/dcq4xvm.css");
+
+html {
+    height: 100%;
+}
+
+body {
     background: linear-gradient(to bottom right, #ffffff, #c7c7c7);
     background-repeat: no-repeat;
     height: 100%;
     width: 100%;
+    font-family: 'Roboto', sans-serif;
 }
 
 h1 {
@@ -24,39 +31,55 @@ section {
     background-color: rgba(51, 51, 51, 0.9882352941176471);
     margin-bottom: 0;
     padding: 0;
-    height: 50px;
+    min-height: 54px;
 
     #navbar-logo {
-        background-image: url('../images/sample.svg');
-        background-image: url('../images/logo2_v2.svg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 40px;
-        height: 40px;
         margin-left: 10px;
+        margin-right: 0;
+        margin-top: 2px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+
+        img {
+            width: 40px;
+            height: 40px;
+        }
     }
 
-    .navbar-list-item.active {
-        color: #444;
-        background-color: unset;
+    .navbar-list-item {
+
 
         .nav-link {
-            /*background-color: unset;
-            background: linear-gradient(330deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
-            background: linear-gradient(to bottom right, #add8e6, #99d599);
-            background: linear-gradient(to bottom right, lightblue, lightgreen);
-            background: linear-gradient(to bottom right, #0592c0, #d96b6b);
-            background: linear-gradient(to bottom right, #3fd2a9, #155597);
-            background: linear-gradient(to top right, #155597, #3fd2a9);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;*/
-            color: #2192ff;
-            color: #2aa5ff;
+            font-weight: 200;
+            margin-top: 2px;
+            padding-right: 16px;
+            text-align: right;
+        }
+
+        &.active {
+            color: #444;
+            background-color: unset;
+
+            .nav-link {
+                background-color: unset;
+                background: linear-gradient(330deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
+                background: linear-gradient(to bottom right, #add8e6, #99d599);
+                background: linear-gradient(to bottom right, lightblue, lightgreen);
+                background: linear-gradient(to bottom right, #0592c0, #d96b6b);
+                background: linear-gradient(to bottom right, #3fd2a9, #155597);
+                background: linear-gradient(to top right, #155597, #3fd2a9);
+                background: linear-gradient(to top right, #047abf, #3fd2a9);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                color: #2192ff;
+                color: #2aa5ff;
+                font-weight: 500;
+            }
         }
     }
 
     a {
-        font-size: 28px;
+        font-size: 24px;
         color: #999;
 
         &:hover {
@@ -66,19 +89,29 @@ section {
 }
 
 @keyframes shadowHover {
-    from {box-shadow: 4px 4px 30px #333;}
-    to {box-shadow: 1px 1px 10px #333;}
+    from {
+        box-shadow: 4px 4px 30px #333;
+    }
+
+    to {
+        box-shadow: 1px 1px 10px #333;
+    }
 }
 
 @keyframes insideHover {
-    from {background-color: unset;}
-    to {background-color: rgba(48, 48, 48, 0.7686274509803922);}
+    from {
+        background-color: unset;
+    }
+
+    to {
+        background-color: rgba(48, 48, 48, 0.7686274509803922);
+    }
 }
 
 #content-sections {
     margin-left: auto;
     margin-right: auto;
-    padding: 50px 5% 0;
+    padding: 10px 5% 0;
     width: 100%;
     max-width: 2000px;
 

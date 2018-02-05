@@ -5,16 +5,17 @@
     <title>Sample Site 1</title>
     <!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
     <link href="content/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.typekit.net/dcq4xvm.css">
     <link href="css/index.css" rel="stylesheet" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark <!--bg-dark-->">
-            <a id="navbar-logo" class="navbar-brand" onclick="ShowContentSection('home')"></a>
+        <nav class="navbar navbar-expand-lg navbar-dark tk-roboto">
+            <a id="navbar-logo" class="navbar-brand" onclick="ShowContentSection('home')"><img src="images/logo2_v2.svg" /></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="example-navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="nav navbar-nav">
                     <li class="nav-item navbar-list-item" data-show="home"><a class="nav-link" href="#home">Home</a></li>
                     <li class="nav-item navbar-list-item" data-show="apollo"><a class="nav-link" href="#apollo">Apollo</a></li>
@@ -42,25 +43,25 @@
             </div>-->
         </nav>
         <!--<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle"
-                    data-toggle="collapse" data-target="#example-navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a id="navbar-logo" class="navbar-brand" onclick="ShowContentSection('home')"></a>
-        </div>
-        <div class="collapse navbar-collapse" id="example-navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li class="navbar-list-item" data-show="home"><a href="#home">Home</a></li>
-                <li class="navbar-list-item" data-show="apollo"><a href="#apollo">Apollo</a></li>
-                <li class="navbar-list-item" data-show="resume"><a href="#resume">Resume</a></li>
-                <li class="navbar-list-item" data-show="blogIndex"><a href="#blogIndex">Blog</a></li>
-            </ul>
-        </div>
-    </nav>-->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle"
+                        data-toggle="collapse" data-target="#example-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a id="navbar-logo" class="navbar-brand" onclick="ShowContentSection('home')"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="navbar-list-item" data-show="home"><a href="#home">Home</a></li>
+                    <li class="navbar-list-item" data-show="apollo"><a href="#apollo">Apollo</a></li>
+                    <li class="navbar-list-item" data-show="resume"><a href="#resume">Resume</a></li>
+                    <li class="navbar-list-item" data-show="blogIndex"><a href="#blogIndex">Blog</a></li>
+                </ul>
+            </div>
+        </nav>-->
     </header>
     <div id="content-sections">
     </div>
@@ -68,8 +69,8 @@
         <p>Copyright &copy; 2017 Matty J</p>
     </footer>
     <script src="script/index.js"></script>
-    <script src="Scripts/jquery-3.2.1.min.js"></script>
-    <script src="Scripts/popper.min.js"></script>
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/umd/popper.min.js"></script>
 </body>
 </html>
