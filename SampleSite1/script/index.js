@@ -1,11 +1,11 @@
-document.addEventListener("DOMContentLoaded", function () {
-    window.addEventListener("hashchange", OnHashChange, false);
-    OnHashChange();
+window.addEventListener("DOMContentLoaded", function () {
+    ChangePage("home");
 });
-function OnHashChange() {
-    var locationHash = window.location.hash;
-    if (locationHash && locationHash.length > 1) {
-        var startSection = locationHash.substr(1);
+window.addEventListener("popstate", function (e) {
+    ShowContentSection(e.state.page);
+});
+function ChangePage(startSection) {
+    if (startSection) {
         var regEx = /blog-(\w+)/;
         if (regEx.test(startSection)) {
             ShowBlogItem(startSection.match(regEx)[1]);
@@ -30,6 +30,7 @@ function ShowContentSection(sectionName) {
     var activeItem = document.querySelector(".navbar-list-item[data-show='" + sectionName + "']");
     if (activeItem)
         activeItem.classList.add("active");
+    history.pushState({ page: sectionName }, sectionName, "?page=" + sectionName);
     var section = document.getElementById(sectionName);
     if (section != null) {
         section.removeAttribute("hidden");
@@ -78,7 +79,7 @@ function LoadIndex(container) {
         }
         clone.classList.remove("template");
         blogStruct.addEventListener("click", function (e) {
-            location.hash = "#blog-" + e.currentTarget.getAttribute("data-blog-id");
+            ChangePage("blog-" + e.currentTarget.getAttribute("data-blog-id"));
         });
         index.appendChild(clone);
     }

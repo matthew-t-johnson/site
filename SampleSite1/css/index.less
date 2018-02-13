@@ -1,15 +1,15 @@
 ﻿@import url("https://use.typekit.net/dcq4xvm.css");
 
 html {
-    height: 100%;
+    min-height: 100%;
+    background: linear-gradient(to bottom right, #ffffff, #c7c7c7);
+    background-repeat: no-repeat;
 }
 
 body {
-    background: linear-gradient(to bottom right, #ffffff, #c7c7c7);
-    background-repeat: no-repeat;
-    height: 100%;
-    width: 100%;
+    background-color: unset;
     font-family: 'Roboto', sans-serif;
+    padding-top: 60px;
 }
 
 h1 {
@@ -46,6 +46,10 @@ section {
         }
     }
 
+    .navbar-toggler {
+        border: 0;
+    }
+
     .navbar-list-item {
 
 
@@ -62,7 +66,7 @@ section {
 
             .nav-link {
                 background-color: unset;
-                background: linear-gradient(330deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
+                /*background: linear-gradient(330deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
                 background: linear-gradient(to bottom right, #add8e6, #99d599);
                 background: linear-gradient(to bottom right, lightblue, lightgreen);
                 background: linear-gradient(to bottom right, #0592c0, #d96b6b);
@@ -72,7 +76,9 @@ section {
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 color: #2192ff;
-                color: #2aa5ff;
+                color: #2aa5ff;*/
+                color: #4ca7ea;
+                color: #16bbe2;
                 font-weight: 500;
             }
         }
@@ -114,6 +120,29 @@ section {
     padding: 10px 5% 0;
     width: 100%;
     max-width: 2000px;
+
+    #resume {
+
+        #resumeNav {
+            box-shadow: 1px 1px 15px #424242;
+
+            a {
+                border-radius: 0;
+            }
+        }
+
+        #resumeContent {
+            position: relative;
+            height: 100%;
+            overflow-y: scroll;
+            margin-top: 20px;
+            padding-bottom: 20px;
+
+            .resumeContentText {
+                margin-left: 5%;
+            }
+        }
+    }
 
     #blogIndex {
 
