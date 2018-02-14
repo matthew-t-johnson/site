@@ -98,6 +98,9 @@ section {
   width: 100%;
   max-width: 2000px;
 }
+#content-sections #apollo img {
+  max-width: 100%;
+}
 #content-sections #resume #resumeNav {
   box-shadow: 1px 1px 15px #424242;
 }
@@ -107,12 +110,40 @@ section {
 #content-sections #resume #resumeContent {
   position: relative;
   height: 100%;
-  overflow-y: scroll;
+  /*overflow-y: scroll;*/
   margin-top: 20px;
   padding-bottom: 20px;
 }
 #content-sections #resume #resumeContent .resumeContentText {
   margin-left: 5%;
+}
+#content-sections #resume #resumeContent .card {
+  background-image: url(https://www.scu.edu/media/public/buildings-rooms-and-spaces/mission-gardens.jpg);
+  background-size: cover;
+  background-position: center;
+  border: 0;
+  width: 90%;
+  margin: 20px auto;
+}
+#content-sections #resume #resumeContent .card .card-header {
+  background-color: rgba(179, 7, 56, 0.9);
+  color: white;
+  font-size: 16pt;
+}
+#content-sections #resume #resumeContent .card .card-body {
+  background-color: rgba(43, 42, 42, 0.8);
+  color: white;
+}
+#content-sections #resume #resumeContent .card .card-footer {
+  background-color: #b30738;
+  color: white;
+  font-size: 12pt;
+}
+#content-sections #resume #resumeContent .progress {
+  height: 30px;
+}
+#content-sections #resume #resumeContent .progress i {
+  font-size: 20pt;
 }
 #content-sections #blogIndex h1 {
   margin-top: 1%;
