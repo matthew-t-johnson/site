@@ -55,8 +55,23 @@ function ShowContentSection(sectionName: string): void {
             if (sectionName === "blogIndex") {
                 LoadIndex(section);
             }
+
+            if (sectionName === "resume") {
+                var resumeContent = document.getElementById("resumeContent");
+
+                resumeContent.addEventListener("scroll", OnResumeScroll);
+                OnResumeScroll();
+
+                window.addEventListener("resize", AdjustResumeContentHeight);
+                AdjustResumeContentHeight();
+            }
         }
     }
+}
+
+function AdjustResumeContentHeight(): void {
+    var resumeContent = document.getElementById("resumeContent");
+    resumeContent.style.height = (window.innerHeight - resumeContent.getBoundingClientRect().top - 40) + "px";
 }
 
 function GetContent(section: string): string {
@@ -145,4 +160,68 @@ function NewBlogPost(): void {
     console.log(xhr.responseText);
 
     //var item = JSON.parse(xhr.responseText) as BlogItem;
+}
+
+function makeCurrent(e: MouseEvent): void {
+    e.preventDefault();
+    var a = e.currentTarget as HTMLElement;
+    var parent = a.parentElement;
+
+    var selected = parent.querySelectorAll("a.current") as NodeListOf<HTMLElement>;
+    for (var i = 0; i < selected.length; i++) {
+        selected[i].classList.remove("current");
+        highlightItem(selected[i], false);
+    }
+
+    highlightItem(a, true);
+    a.classList.add("current");
+}
+
+function highlightItem(a: HTMLElement, add: boolean): void {
+    var item = document.querySelector(a.getAttribute("href"));
+
+    if (item) {
+        if (add) {
+            item.classList.add("current-item");
+
+            item.scrollIntoView(true);
+        }
+        else
+            item.classList.remove("current-item");
+    }
+}
+
+function IndicateCurrent(id: string, divs: NodeListOf<HTMLElement>): void {
+    var navs = document.querySelectorAll("#resumeNav > a") as NodeListOf<HTMLElement>;
+
+    for (let i = 0; i < navs.length; i++) {
+
+        if (navs[i].getAttribute("href") === `#${id}`) 
+            navs[i].classList.add("current");
+        else 
+            navs[i].classList.remove("current");
+    }
+
+    for (let i = 0; i < divs.length; i++) {
+        if (divs[i].id === id)
+            divs[i].classList.add("current-item");
+        else
+            divs[i].classList.remove("current-item");
+    }
+}
+
+function OnResumeScroll(): void {
+    var resumeContent = document.getElementById("resumeContent");
+    var divs = document.querySelectorAll("#resumeContent > div") as NodeListOf<HTMLElement>;
+    var sTop = resumeContent.scrollTop;
+
+    for (let i = 0; i < divs.length; i++) {
+        var top = divs[i].offsetTop;
+
+        if (top >= sTop) {
+            IndicateCurrent(divs[i].id, divs);
+            break;
+        }
+    }
+
 }

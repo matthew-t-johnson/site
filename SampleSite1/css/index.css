@@ -109,12 +109,18 @@ section {
 #content-sections #resume #resumeNav a {
   border-radius: 0;
 }
+#content-sections #resume #resumeNav a.current {
+  background-color: dodgerblue;
+  color: white;
+}
 #content-sections #resume #resumeContent {
   position: relative;
-  height: 700px;
-  overflow-y: scroll;
+  overflow-y: auto;
   margin-top: 20px;
   padding-bottom: 20px;
+}
+#content-sections #resume #resumeContent div.current-item h4 {
+  color: dodgerblue;
 }
 #content-sections #resume #resumeContent .resumeContentText {
   margin-left: 5%;
@@ -243,4 +249,32 @@ footer p {
     height: 225px;
     display: block;
   }
+}
+#resumeContent {
+  overflow: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  -ms-scroll-chaining: none;
+  touch-action: pan-y;
+}
+#resumeContent[hidden],
+[hidden] #resumeContent {
+  -webkit-overflow-scrolling: auto;
+}
+#resumeContent::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background: transparent;
+}
+#resumeContent::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 0.9);
+  border-radius: 10px;
+  border: 4px solid transparent;
+  background-clip: padding-box;
+}
+#resumeContent::-webkit-scrollbar-thumb:hover,
+#resumeContent::-webkit-scrollbar-thumb:active {
+  border-radius: 5px;
+  border-width: 1px;
 }

@@ -137,15 +137,26 @@ section {
 
             a {
                 border-radius: 0;
+
+                &.current {
+                    background-color: dodgerblue;
+                    color: white;
+                }
             }
         }
 
         #resumeContent {
             position: relative;
-            height: 700px;
-            overflow-y: scroll;
+            overflow-y: auto;
             margin-top: 20px;
             padding-bottom: 20px;
+
+            div.current-item {
+
+                h4 {
+                    color: dodgerblue;
+                }
+            }
 
             .resumeContentText {
                 margin-left: 5%;
@@ -311,3 +322,37 @@ footer {
         }
     }
 }
+
+
+#resumeContent {
+    overflow: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -ms-scroll-chaining: none;
+    touch-action: pan-y;
+
+    &[hidden],
+    [hidden] & {
+        -webkit-overflow-scrolling: auto;
+    }
+
+    &::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+        background: transparent;
+
+        &-thumb {
+            background-color: rgba(100, 100, 100, 0.9);
+            border-radius: 10px;
+            border: 4px solid transparent;
+            background-clip: padding-box;
+
+            &:hover, &:active {
+                border-radius: 5px;
+                border-width: 1px;
+            }
+        }
+    }
+}
+
