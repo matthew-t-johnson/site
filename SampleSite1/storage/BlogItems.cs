@@ -14,12 +14,15 @@ namespace SampleSite1.storage
     public class BlogItems
     {
 
-        private static readonly CloudStorageAccount storageAccount = CloudStorageAccount.Parse(WebConfigurationManager.AppSettings["StorageConnectionString"]);
+       // private readonly CloudStorageAccount storageAccount = CloudStorageAccount.Parse(WebConfigurationManager.AppSettings["StorageConnectionString"]);
         private readonly CloudTableClient tableClient;
         private readonly CloudTable table;
 
         public BlogItems()
         {
+            var connectionString = WebConfigurationManager.AppSettings["StorageConnectionString"];
+
+            var storageAccount = CloudStorageAccount.Parse(connectionString);
             // Create the table client.
             tableClient = storageAccount.CreateCloudTableClient();
 

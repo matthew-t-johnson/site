@@ -1,15 +1,22 @@
 ﻿@import url("https://use.typekit.net/dcq4xvm.css");
 html {
   min-height: 100%;
-  background: linear-gradient(to bottom right, #ffffff, #c7c7c7);
-  background-repeat: no-repeat;
+}
+@media not print {
+  html {
+    background: linear-gradient(to bottom right, #ffffff, #c7c7c7);
+    background-repeat: no-repeat;
+  }
 }
 body {
-  background-color: unset;
+  background-color: transparent;
   font-family: 'Roboto', sans-serif;
-  padding-top: 60px;
-  /*height: 100%;*/
-  overflow: hidden;
+}
+@media not print {
+  body {
+    padding-top: 60px;
+    overflow: hidden;
+  }
 }
 h1 {
   font-family: "Segoe UI", sans-serif;
@@ -17,9 +24,11 @@ h1 {
 .template {
   display: none;
 }
-section {
-  margin-left: auto;
-  margin-right: auto;
+@media not print {
+  section {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .navbar {
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.72941176);
@@ -28,6 +37,7 @@ section {
   margin-bottom: 0;
   padding: 0;
   min-height: 54px;
+  font-family: 'Roboto Light', sans-serif;
 }
 .navbar #navbar-logo {
   margin-left: 10px;
@@ -93,12 +103,14 @@ section {
     background-color: rgba(48, 48, 48, 0.76862745);
   }
 }
-#content-sections {
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px 5% 0;
-  width: 100%;
-  max-width: 2000px;
+@media not print {
+  #content-sections {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 5% 0;
+    width: 100%;
+    max-width: 2000px;
+  }
 }
 #content-sections #apollo img {
   max-width: 100%;
@@ -113,14 +125,30 @@ section {
   background-color: dodgerblue;
   color: white;
 }
+@media print {
+  #content-sections #resume #resumeNav {
+    display: none;
+  }
+}
 #content-sections #resume #resumeContent {
   position: relative;
-  overflow-y: auto;
-  margin-top: 20px;
-  padding-bottom: 20px;
 }
-#content-sections #resume #resumeContent div.current-item h4 {
-  color: dodgerblue;
+@media not print {
+  #content-sections #resume #resumeContent {
+    overflow-y: auto;
+    margin-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+@media print {
+  #content-sections #resume #resumeContent {
+    height: auto !important;
+  }
+}
+@media not print {
+  #content-sections #resume #resumeContent div.current-item h4 {
+    color: dodgerblue;
+  }
 }
 #content-sections #resume #resumeContent .resumeContentText {
   margin-left: 5%;
@@ -238,6 +266,11 @@ footer p {
   padding-left: 10px;
   padding-right: 10px;
 }
+@media print {
+  footer {
+    display: none;
+  }
+}
 @media (max-width: 768px) {
   #navbarTogglerDemo02.collapse {
     height: 0;
@@ -277,4 +310,22 @@ footer p {
 #resumeContent::-webkit-scrollbar-thumb:active {
   border-radius: 5px;
   border-width: 1px;
+}
+.printHeader table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+.printHeader table td {
+  padding: 0;
+  vertical-align: middle;
+  width: 33.3%;
+}
+.printHeader table td.name {
+  text-align: center;
+  font-size: 16pt;
+}
+.printHeader table td:not([rowspan]) {
+  text-align: right;
 }
