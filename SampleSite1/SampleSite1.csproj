@@ -155,6 +155,7 @@
     <Content Include="sections\blogIndex.html" />
     <Content Include="sections\blogItem.html" />
     <Content Include="sections\home.html" />
+    <Content Include="sections\portfolioIndex.html" />
     <Content Include="sections\resume.html" />
     <Content Include="css\index.css">
       <DependentUpon>index.less</DependentUpon>

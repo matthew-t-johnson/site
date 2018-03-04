@@ -329,3 +329,8 @@ footer p {
 .printHeader table td:not([rowspan]) {
   text-align: right;
 }
+#websiteFrame {
+  width: 90%;
+  min-width: 600px;
+  height: 1000px;
+}
