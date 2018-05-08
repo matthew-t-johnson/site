@@ -329,8 +329,26 @@ footer p {
 .printHeader table td:not([rowspan]) {
   text-align: right;
 }
-#websiteFrame {
+#portfolio-nav {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+#portfolio-nav nav {
+  min-width: 600px;
+}
+#frame-wrapper {
+  text-align: center;
+}
+#frame-wrapper #websiteFrame {
   width: 90%;
   min-width: 600px;
   height: 1000px;
+  box-shadow: 4px 4px 30px #333;
+}
+#loading-wrapper {
+  font-size: 75pt;
+  text-align: center;
+  padding-top: 350px;
 }

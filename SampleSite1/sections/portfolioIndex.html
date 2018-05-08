@@ -1,11 +1,17 @@
 ﻿<h1>Portfolio</h1>
 
-<div>
-    <a onclick="document.getElementById('websiteFrame').src='https://picagrill.azurewebsites.net/'">Pica Border Grill</a>
-    <a onclick="document.getElementById('websiteFrame').src='https://edwardfosterclothing.azurewebsites.net/'">Edward Foster</a>
-    <a onclick="document.getElementById('websiteFrame').src='https://favl.azurewebsites.net/'">FAVL</a>
+<div id="portfolio-nav">
+    <nav class="nav nav-pills nav-justified">
+        <a class="nav-item nav-link" onclick="ShowPortfolioItem('https://picagrill.azurewebsites.net/', this)">Pica Border Grill</a>
+        <a class="nav-item nav-link" onclick="ShowPortfolioItem('https://edwardfosterclothing.azurewebsites.net/', this)">Edward Foster</a>
+        <a class="nav-item nav-link" onclick="ShowPortfolioItem('https://favl.azurewebsites.net/', this)">FAVL</a>
+    </nav>
 </div>
 
-<div>
+<div id="frame-wrapper" hidden>
     <iframe id="websiteFrame" frameborder="0"></iframe>
+</div>
+
+<div id="loading-wrapper" hidden>
+    <p><i class="fas fa-spinner"></i></p>
 </div>

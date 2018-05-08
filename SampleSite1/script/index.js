@@ -175,4 +175,27 @@ function OnResumeScroll() {
         }
     }
 }
+function ShowPortfolioItem(url, el) {
+    var frameWrapper = document.getElementById("frame-wrapper");
+    var loadingWrapper = document.getElementById("loading-wrapper");
+    var anchors = document.querySelectorAll("#portfolio-nav a");
+    for (var i = 0; i < anchors.length; i++) {
+        anchors[i].classList.remove("active");
+    }
+    el.classList.add("active");
+    frameWrapper.setAttribute("hidden", "");
+    var spinner = loadingWrapper.querySelector(".fa-spinner");
+    spinner.classList.add("fa-spin");
+    loadingWrapper.removeAttribute("hidden");
+    var frame = document.getElementById("websiteFrame");
+    frame.style.height = (window.innerHeight - frame.offsetTop - 200) + "px";
+    frame.addEventListener("load", OnIFrameLoaded);
+    frame.src = url;
+    function OnIFrameLoaded() {
+        spinner.classList.remove("fa-spin");
+        loadingWrapper.setAttribute("hidden", "");
+        frameWrapper.removeAttribute("hidden");
+        frame.removeEventListener("load", OnIFrameLoaded);
+    }
+}
 //# sourceMappingURL=index.js.map
