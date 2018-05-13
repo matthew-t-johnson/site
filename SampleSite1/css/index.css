@@ -307,7 +307,7 @@ h1 {
   /*padding: 10px;*/
   border-radius: 5px;
   padding-top: 50%;
-  background-color: #3030302e;
+  background-color: #3030302;
 }
 #content-sections #blogIndex #index-container.row .blog-item-container .blog-item .insides .text-container {
   /*background-color: #3030309e;*/
@@ -337,7 +337,7 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #333333fc;
+  background-color: #333333;
   color: #eee;
 }
 footer p {
@@ -437,4 +437,30 @@ footer p {
   font-size: 75pt;
   text-align: center;
   padding-top: 350px;
+}
+.three-horz {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.three-horz div {
+  text-align: center;
+  padding: 0;
+}
+.three-horz div img {
+  height: 100px;
+}
+.three-horz div.less {
+  height: 100px;
+  padding-top: 25px;
+}
+.three-horz div.less img {
+  height: 60px;
+}
+.three-horz div h3 {
+  font-size: 10pt;
+  margin: 10px 0;
 }

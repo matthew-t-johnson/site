@@ -372,7 +372,7 @@ section {
                         /*padding: 10px;*/
                         border-radius: 5px;
                         padding-top: 50%;
-                        background-color: #3030302e;
+                        background-color: #3030302;
 
                         .text-container {
                             /*background-color: #3030309e;*/
@@ -415,7 +415,7 @@ footer {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #333333fc;
+    background-color: #333333;
     color: #eee;
 
     p {
@@ -512,7 +512,7 @@ footer {
 
     nav {
         min-width: 600px;
-    
+
         a {
             border: 1px solid #333;
             width: 95%;
@@ -539,4 +539,36 @@ footer {
     font-size: 75pt;
     text-align: center;
     padding-top: 350px;
+}
+
+.three-horz {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    div {
+        text-align: center;
+        padding: 0;
+
+        img {
+            height: 100px;
+        }
+
+        &.less {
+            height: 100px;
+            padding-top: 25px;
+
+            img {
+                height: 60px;
+            }
+        }
+
+        h3 {
+            font-size: 10pt;
+            margin: 10px 0;
+        }
+    }
 }
