@@ -154,32 +154,111 @@ h1 {
   margin-left: 5%;
 }
 #content-sections #resume #resumeContent .card {
-  background-image: url(https://www.scu.edu/media/public/buildings-rooms-and-spaces/mission-gardens.jpg);
   background-size: cover;
   background-position: center;
   border: 0;
   width: 90%;
   margin: 20px auto;
+  min-height: 300px;
 }
-#content-sections #resume #resumeContent .card .card-header {
+#content-sections #resume #resumeContent .card#scu {
+  background-image: url(https://www.scu.edu/media/public/buildings-rooms-and-spaces/mission-gardens.jpg);
+}
+#content-sections #resume #resumeContent .card#scu .card-header {
   background-color: rgba(179, 7, 56, 0.9);
   color: white;
   font-size: 16pt;
 }
-#content-sections #resume #resumeContent .card .card-body {
+#content-sections #resume #resumeContent .card#scu .card-body {
   background-color: rgba(43, 42, 42, 0.8);
   color: white;
 }
-#content-sections #resume #resumeContent .card .card-footer {
+#content-sections #resume #resumeContent .card#scu .card-footer {
   background-color: #b30738;
+  color: white;
+  font-size: 12pt;
+}
+#content-sections #resume #resumeContent .card#trickster {
+  background-image: url('../images/cards-header-810x378.png');
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-color: #005900;
+}
+#content-sections #resume #resumeContent .card#trickster .card-header {
+  background-color: rgba(0, 89, 0, 0.9);
+  color: white;
+  font-size: 16pt;
+}
+#content-sections #resume #resumeContent .card#trickster .card-body {
+  background-color: rgba(43, 42, 42, 0.8);
+  color: white;
+}
+#content-sections #resume #resumeContent .card#trickster .card-footer {
+  background-color: #005900;
+  color: white;
+  font-size: 12pt;
+}
+#content-sections #resume #resumeContent .card#efc {
+  background-image: url('../images/90px-blue-lyre.png');
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-color: white;
+}
+#content-sections #resume #resumeContent .card#efc .card-header {
+  background-color: rgba(40, 50, 119, 0.9);
+  color: white;
+  font-size: 16pt;
+}
+#content-sections #resume #resumeContent .card#efc .card-body {
+  background-color: rgba(43, 42, 42, 0.8);
+  color: white;
+}
+#content-sections #resume #resumeContent .card#efc .card-footer {
+  background-color: #283277;
+  color: white;
+  font-size: 12pt;
+}
+#content-sections #resume #resumeContent .card#pica {
+  background-image: url('../images/Pica-Grill-Logo-572x425.png');
+  background-size: 30%;
+  background-repeat: no-repeat;
+  background-color: white;
+}
+#content-sections #resume #resumeContent .card#pica .card-header {
+  background-color: rgba(0, 64, 0, 0.9);
+  color: white;
+  font-size: 16pt;
+}
+#content-sections #resume #resumeContent .card#pica .card-body {
+  background-color: rgba(43, 42, 42, 0.8);
+  color: white;
+}
+#content-sections #resume #resumeContent .card#pica .card-footer {
+  background-color: #004000;
   color: white;
   font-size: 12pt;
 }
 #content-sections #resume #resumeContent .progress {
   height: 30px;
+  margin-bottom: 20px;
 }
 #content-sections #resume #resumeContent .progress i {
   font-size: 20pt;
+}
+#content-sections #resume #resumeContent .progress .html {
+  background-color: #e54c21;
+  color: white;
+}
+#content-sections #resume #resumeContent .progress .css {
+  background-color: #305fa2;
+  color: white;
+}
+#content-sections #resume #resumeContent .progress .less {
+  background-color: #264d7e;
+}
+#content-sections #resume #resumeContent .progress .js {
+  background-color: #f1db4f;
+  color: black;
 }
 #content-sections #blogIndex h1 {
   margin-top: 1%;
@@ -337,6 +416,13 @@ footer p {
 }
 #portfolio-nav nav {
   min-width: 600px;
+}
+#portfolio-nav nav a {
+  border: 1px solid #333;
+  width: 95%;
+}
+#portfolio-nav nav a + a {
+  margin-left: 10px;
 }
 #frame-wrapper {
   text-align: center;

@@ -186,36 +186,132 @@ section {
             }
 
             .card {
-                background-image: url(https://www.scu.edu/media/public/buildings-rooms-and-spaces/mission-gardens.jpg);
                 background-size: cover;
                 background-position: center;
                 border: 0;
                 width: 90%;
                 margin: 20px auto;
+                min-height: 300px;
 
-                .card-header {
-                    background-color: rgba(179, 7, 56, 0.9);
-                    color: white;
-                    font-size: 16pt;
+                &#scu {
+                    background-image: url(https://www.scu.edu/media/public/buildings-rooms-and-spaces/mission-gardens.jpg);
+
+                    .card-header {
+                        background-color: rgba(179, 7, 56, 0.9);
+                        color: white;
+                        font-size: 16pt;
+                    }
+
+                    .card-body {
+                        background-color: rgba(43, 42, 42, 0.80);
+                        color: white;
+                    }
+
+                    .card-footer {
+                        background-color: rgba(179, 7, 56, 1);
+                        color: white;
+                        font-size: 12pt;
+                    }
                 }
 
-                .card-body {
-                    background-color: rgba(43, 42, 42, 0.80);
-                    color: white;
+                &#trickster {
+                    background-image: url('../images/cards-header-810x378.png');
+                    background-size: 50%;
+                    background-repeat: no-repeat;
+                    background-color: #005900;
+
+                    .card-header {
+                        background-color: rgba(0, 89, 0, 0.90);
+                        color: white;
+                        font-size: 16pt;
+                    }
+
+                    .card-body {
+                        background-color: rgba(43, 42, 42, 0.80);
+                        color: white;
+                    }
+
+                    .card-footer {
+                        background-color: #005900;
+                        color: white;
+                        font-size: 12pt;
+                    }
                 }
 
-                .card-footer {
-                    background-color: rgba(179, 7, 56, 1);
-                    color: white;
-                    font-size: 12pt;
+                &#efc {
+                    background-image: url('../images/90px-blue-lyre.png');
+                    background-size: auto;
+                    background-repeat: no-repeat;
+                    background-color: white;
+
+                    .card-header {
+                        background-color: rgba(40, 50, 119, 0.90);
+                        color: white;
+                        font-size: 16pt;
+                    }
+
+                    .card-body {
+                        background-color: rgba(43, 42, 42, 0.80);
+                        color: white;
+                    }
+
+                    .card-footer {
+                        background-color: #283277;
+                        color: white;
+                        font-size: 12pt;
+                    }
+                }
+
+                &#pica {
+                    background-image: url('../images/Pica-Grill-Logo-572x425.png');
+                    background-size: 30%;
+                    background-repeat: no-repeat;
+                    background-color: white;
+
+                    .card-header {
+                        background-color: rgba(0, 64, 0, .9);
+                        color: white;
+                        font-size: 16pt;
+                    }
+
+                    .card-body {
+                        background-color: rgba(43, 42, 42, 0.80);
+                        color: white;
+                    }
+
+                    .card-footer {
+                        background-color: #004000;
+                        color: white;
+                        font-size: 12pt;
+                    }
                 }
             }
 
             .progress {
                 height: 30px;
+                margin-bottom: 20px;
 
                 i {
                     font-size: 20pt;
+                }
+
+                .html {
+                    background-color: #e54c21;
+                    color: white;
+                }
+
+                .css {
+                    background-color: #305fa2;
+                    color: white;
+                }
+
+                .less {
+                    background-color: #264d7e;
+                }
+
+                .js {
+                    background-color: #f1db4f;
+                    color: black;
                 }
             }
         }
@@ -416,6 +512,15 @@ footer {
 
     nav {
         min-width: 600px;
+    
+        a {
+            border: 1px solid #333;
+            width: 95%;
+
+            + a {
+                margin-left: 10px;
+            }
+        }
     }
 }
 

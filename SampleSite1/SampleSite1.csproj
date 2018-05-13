@@ -121,8 +121,11 @@
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="images\90px-blue-lyre.png" />
+    <Content Include="images\cards-header-810x378.png" />
     <Content Include="images\logo2_v2.svg" />
     <Content Include="images\logoRedesign_April_2017.svg" />
+    <Content Include="images\Pica-Grill-Logo-572x425.png" />
     <Content Include="images\sample.png" />
     <Content Include="images\sample.svg" />
     <Content Include="fonts\FontAwesome.otf" />
@@ -170,6 +173,7 @@
     <Content Include="sections\blogItem.html" />
     <Content Include="sections\home.html" />
     <Content Include="sections\portfolioIndex.html" />
+    <Content Include="sections\printResume.html" />
     <Content Include="sections\resume.html" />
     <Content Include="css\index.css">
       <DependentUpon>index.less</DependentUpon>
